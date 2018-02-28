@@ -17,14 +17,14 @@ Basic
 ```
 ```html
 <script>
-  $("#elementName").inputClear();
+  $("#elementName").inputOption();
 </script>
 ```
 Options
 
 ```html
 <script>
-$("#elementName").inputClear({
+$("#elementName").inputOption({
     placeholder:"Select Element",
     btnMethod:"ElementView()",
     clearBtn: true,
