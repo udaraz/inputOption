@@ -20,3 +20,22 @@ Basic
   $("#elementName").inputClear();
 </script>
 ```
+Options
+
+```html
+<script>
+$("#elementName").inputClear({
+    placeholder:"Select Element",
+    btnMethod:"ElementView()",
+    clearBtn: true,
+    mainBtnIcon: "clip-pencil",
+    btnModalStatus: true, //options: disable ,enable or true, false
+    btnClearStatus: true, //options: disable ,enable or true, false
+    btnMethod: "", 
+    clearMethod: "",
+    inputReadStatus:false,
+    
+});
+
+</script>
+```
