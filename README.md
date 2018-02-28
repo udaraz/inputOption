@@ -17,6 +17,6 @@ Basic
 ```
 ```html
 <script>
-  $("#projectName").inputClear();
+  $("#elementName").inputClear();
 </script>
 ```
