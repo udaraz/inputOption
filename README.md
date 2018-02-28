@@ -7,3 +7,16 @@ A lightwieght jQuery plugin for adding option buttons to Bootstrap 3 compatible 
 ### Usage
 
 Basic
+```html
+ <div class="form-group">
+     <label class="control-label"> Element </label>
+     <div class="input-group">         
+         <input type="text" id="elementName">
+     </div>
+ </div>
+```
+```html
+<script>
+  $("#projectName").inputClear();
+</script>
+```
