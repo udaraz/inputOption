@@ -17,7 +17,9 @@ Basic
 ```
 ```html
 <script>
-  $("#elementName").inputOption();
+  $(document).ready(function () {
+    $("#elementName").inputOption();
+  });
 </script>
 ```
 Options
