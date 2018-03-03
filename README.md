@@ -42,5 +42,5 @@ $("#elementName").inputOption({
 </script>
 ```
 ### Required Libraries
-jquery
-jquery-ui
+`jquery`
+`jquery-ui`
