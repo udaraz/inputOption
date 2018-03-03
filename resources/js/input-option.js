@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
 
 
     $.widget("custom.inputOption", {
@@ -6,19 +6,19 @@ $(function () {
         // default options
         options: {
             clearBtn: true,
-            mainBtnIcon: "clip-pencil",
+            mainBtnIcon: "far fa-bell",
             btnModalStatus: true, //options: disable ,enable or true, false
-            btnClearStatus:true, //options: disable ,enable or true, false
+            btnClearStatus: true, //options: disable ,enable or true, false
             btnMethod: "",
-            clearMethod:"",
-//	    	  other options
-//	    	  placeholder:"",
+            clearMethod: "",
+            //other options
+            //placeholder:"",
 
 
         },
 
-        _create: function () {
-        	
+        _create: function() {
+
             this.element.addClass("form-control");
             this.element.attr("placeholder", this.options.placeholder);
             this.element.css("width", this.options.width);
@@ -35,13 +35,13 @@ $(function () {
             $(this._modalBtn).append(this._mainBtnIcon);
 
             this._clearBtn = $('<button type=\'button\' class=\'btn btn-blue input-clear\' data-placement=\'top\'>' +
-                '<i class=\'clip-close-2\'></i>' +
+                '<i class=\'fas fa-times\'></i>' +
                 '</button>');
             if ((this.options.btnClearStatus == false) || (this.options.btnClearStatus == "disable")) {
                 this._clearBtn.attr('disabled', '');
             }
             if (this.options.clearMethod != "") {
-            	this._clearBtn.attr('onClick', this.options.clearMethod);
+                this._clearBtn.attr('onClick', this.options.clearMethod);
             }
 
             this.element.after(this._span);
@@ -53,34 +53,30 @@ $(function () {
 
 
         },
-        _setOption: function(key, value) {        	
-         switch (key) {
-         case "btnModalStatus":
-        	 if ((value == false) || (value == "disable")) {
-                 this._modalBtn.attr('disabled', '');
-             }else{
-            	 this._modalBtn.removeAttr('disabled');
-             }
-         break;
-         case "btnClearStatus":
-        	 if ((value == false) || (value == "disable")) {
-                 this._clearBtn.attr('disabled', '');
-             }else{
-            	 this._clearBtn.removeAttr('disabled');
-             }        
-         break;
-         }
-         },
+        _setOption: function(key, value) {
+            switch (key) {
+                case "btnModalStatus":
+                    if ((value == false) || (value == "disable")) {
+                        this._modalBtn.attr('disabled', '');
+                    } else {
+                        this._modalBtn.removeAttr('disabled');
+                    }
+                    break;
+                case "btnClearStatus":
+                    if ((value == false) || (value == "disable")) {
+                        this._clearBtn.attr('disabled', '');
+                    } else {
+                        this._clearBtn.removeAttr('disabled');
+                    }
+                    break;
+            }
+        },
 
 
     });
-	   	   
+
 
 });
-$(document).on('click', '.input-clear', function () {
+$(document).on('click', '.input-clear', function() {
     $(this).closest('div').children('input').val('');
 });
-
-
-
-

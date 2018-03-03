@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Input Option</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="form-group">
+                    <label class="control-label"> Element </label>
+                    <div class="input-group">
+                        <input type="text" id="elementName">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="../resources/js/jquery-3.2.1.min.js"></script>
+    <script src="../resources/js/jquery-ui.js"></script>
+    <script src="../resources/js/input-option.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#elementName").inputOption({
+                mainBtnIcon: "fas fa-external-link-alt",
+                btnMethod: "alertMsg()",
+                placeholder: "Element Placeholder"
+            });
+        });
+    </script>
+
+    <script>
+        function alertMsg() {
+            alert('clicked');
+        }
+    </script>
+</body>
+
+</html>
